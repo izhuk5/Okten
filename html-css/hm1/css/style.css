@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+p,ul {
+    line-height: 1.5rem;
+}
+
+li {
+    margin-left: 1rem;
+}
+
+
+.container {
+    margin: 2rem auto;
+    max-width: 37.5rem;
+    width: 100%;
+    padding:  1.25rem 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
+    border: 1px solid #111;
+}
+
+h1,h2,h3,h4,img {
+    align-self: center;
+    margin: 1rem 0.5rem;
+}
+
+.Simpsons-Family h1 {
+    font-size: 3rem;
+}
+
+/*main ul {*/
+/*    align-items: unset;*/
+/*}*/
