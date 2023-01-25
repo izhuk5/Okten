@@ -1,0 +1,51 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+*:before, *:after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+aside, nav, footer, header, section {
+    display: block;
+}
+
+a, a:visited {
+    text-decoration: none;
+    color: #232323;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+ul li {
+    list-style: none;
+}
+
+img, picture, video, canvas, svg {
+    display: block;
+}
+
+input, button, textarea, select {
+    font: inherit;
+}
+
+button {
+    display: block;
+    cursor: pointer;
+}
+
+.container {
+    max-width: 77.5rem;
+    width: 100%;
+    margin: 0 auto;
+    padding:  0 1.25rem;
+    background-color: rgb(249, 229, 192);
+}
