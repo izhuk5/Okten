@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>js 1 8 other base types</title>
+</head>
+<body>
+
+<script>
+
+// number
+// strings
+// boolean
+// object
+// undefined - невизначена
+// null - не створена. Під капотом має тип object. Це кароче баг.
+
+let user = {id: 1, name:"Ihor"}; // object
+console.log(!!user); // true
+
+let arr = [1,2,3]; // object also
+console.log(!!user); // true
+
+let a;
+console.log(!!a); // false
+
+console.log(!!null); // null - Кажемо що у нас є якась ячейка і кажемо що вона null - примусово не створена умовно. Також буле булевий false.
+
+console.log(typeof  NaN); // в js будемо зустрічати в якості помилки
+console.log(!!NaN); // false
+
+
+
+</script>
+
+</body>
+</html>
