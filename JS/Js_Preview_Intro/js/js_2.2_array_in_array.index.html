@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>js 2 2 array in array</title>
+</head>
+<body>
+
+
+<script>
+let arr = [
+    [11,22,33], // 0
+    [], // 1
+    [] // 2
+];
+
+// Можна достукатись ось так
+console.log(arr);
+//                          0  1  2
+let innerArray = arr[0]; // 11 22 33
+console.log(innerArray[1]);
+
+// А ще можна ось так
+console.log(arr[0][1]);
+
+</script>
+
+
+</body>
+</html>

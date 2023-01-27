@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>js 2 4 embeded objs</title>
+</head>
+<body>
+
+
+<script>
+
+let user1 = {
+    id: 1,
+    name: 'Ihor',
+    age: 28,
+    skills: ['html', 'js', 'java'],
+    wife: {
+        name: 'Alina',
+        age: 21
+    }
+}
+// спосіб 1
+// console.log(user1.id);
+// спосіб 2 масивоподібний
+// console.log(user1['age']);
+// console.log(user1.skills[2]);
+
+console.log(user1.wife.name);
+
+
+
+</script>
+
+</body>
+</html>
