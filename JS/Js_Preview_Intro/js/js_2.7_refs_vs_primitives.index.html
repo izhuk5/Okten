@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>js 2 7 refs vs primitives</title>
+</head>
+<body>
+
+
+<script>
+
+// примітиви - це ячейки які при копіюванні вітдають своє значення
+// number
+// strings
+// boolean
+
+let a = 100;
+let b = a;
+b = b + 10; // 110
+
+let user = {name: 'vasya'}
+let user2 = user;
+console.log(user2);
+user2.age = 31;
+console.log(user2);
+console.log(user); // це відбувається тоді коли ми маємо масиви, обєкти - це все силочні типи данних
+
+
+</script>
+
+</body>
+</html>

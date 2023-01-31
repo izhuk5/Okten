@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>for</title>
+    <style>
+        .target img {
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+
+
+<script>
+
+// ЦИКЛИ в 99% зі 100% використовується для перебирання масивів
+
+
+// let users = [
+//     {name: 'vasya', age: 31, status: false},
+//     {name: 'petya', age: 30, status: true},
+//     {name: 'kolya', age: 29, status: true},
+//     {name: 'olya', age: 28, status: false},
+//     {name: 'max', age: 30, status: true},
+//     {name: 'anya', age: 31, status: false},
+//     {name: 'oleg', age: 28, status: false},
+//     {name: 'andrey', age: 29, status: true},
+//     {name: 'masha', age: 30, status: true},
+//     {name: 'olya', age: 31, status: false},
+//     {name: 'max', age: 31, status: true}
+// ];
+//
+// // debugger;
+// for (let i = 0; i < users.length; i++ ) {
+//     let user = users[i];
+//     // console.log(users[i]);
+//     // document.write(`<h3> user info - ${users[i].name} ${users[i].age} </h3>`); цей варіант трішки надлишковий можна зробити змінну
+//     document.write(`<h3> user info - ${user.name} ${user.age} </h3>`);
+// }
+
+
+// DATABASE
+let products = [
+    {
+        title: 'milk',
+        price: 22,
+        image: 'https://img.freepik.com/free-photo/glass-jar-full-milk_23-2148211467.jpg?w=1800&t=st=1674899579~exp=1674900179~hmac=4de446e81422e5302d0c5e50988d9e999a442382b2eeab37eb591540fc36b0a2'
+    },
+    {
+        title: 'juice',
+        price: 27,
+        image: 'https://img.freepik.com/free-psd/organic-juice-poster-template_23-2148911049.jpg?w=1800&t=st=1674899633~exp=1674900233~hmac=9a51f5ad9b379bd6227229901910a8eb0f04fa65b6cb2c124ae1408c35ff2853'
+    },
+    {
+        title: 'tomato',
+        price: 47,
+        image: 'https://img.freepik.com/free-vector/fresh-organic-ripe-tomato_53876-111423.jpg?w=1800&t=st=1674899747~exp=1674900347~hmac=ac4ec9d29f5ee86211edc0256e852cce8e81d0e2ec277e2d5051afcedfaf228c'
+    },
+    {
+        title: 'tea',
+        price: 15,
+        image: 'https://img.freepik.com/free-vector/glass-cup-black-tea_1182-1254.jpg?w=1800&t=st=1674899790~exp=1674900390~hmac=d57fe6599e3940ecddecb311efd064ec9ab2e7282ca05891991c7a01d1c8b2eb'
+    }
+];
+
+for (let i = 0; i < products.length; i++) {
+    const product = products[i];
+    console.log(product);
+    document.write(`
+        <div class="target">
+            <h2>${product.title} - ${product.price} UAH</h2>
+            <img src="${product.image}" alt="some img">
+        </div>`)
+}
+
+
+
+
+
+
+
+
+
+</script>
+
+</body>
+</html>

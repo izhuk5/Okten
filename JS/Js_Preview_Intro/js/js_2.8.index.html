@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>if</title>
+</head>
+<body>
+
+
+<script>
+
+// логічні розгалуження if
+
+// let color = 'red';
+// if(color === 'green') {
+//     console.log('stop');
+// } else {
+//     console.log('tyt ne red))');
+// }
+
+// let age = +prompt('enter your age')
+// if(age >= 18) {
+//     console.log('adult content')
+// } else {
+//     console.log('carton ;)');
+// }
+
+// let color = prompt('enter color');
+// if(color === 'green') {
+//     if (confirm('is road clear?')) {
+//         console.log('go');
+//     } else {
+//         console.log('just wait paskyda!');
+//     }
+// } else if (color === 'yellow') {
+//     console.log('wait');
+// } else if (color === 'red') {
+//     console.log('stop');
+// } else {
+//     console.log('?????');
+// }
+
+let color = prompt('enter color');
+let isRoadClear = confirm('road is clear');
+if(color === 'green' && isRoadClear) {
+    console.log('go');
+
+} else if (color === 'yellow') {
+    console.log('wait');
+} else if (color === 'red') {
+    console.log('stop');
+} else {
+    console.log('?????');
+}
+
+
+
+
+
+</script>
+
+
+</body>
+</html>

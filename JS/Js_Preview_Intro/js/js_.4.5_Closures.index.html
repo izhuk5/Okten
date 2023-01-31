@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>js_4.5_closures</title>
+</head>
+<body>
+<script>
+
+// По суті це функція в середині іншої функції.
+// Функція спочатку намагається знайти щось всередині себе (локально) а потім намагається знайти щось що більш глобальноо
+
+// function createCaclFunction(n) {
+//     return function () {
+//         console.log(1000 * n)
+//     }
+// }
+//
+// const calc = createCaclFunction(42);
+// console.log(calc);
+// calc();
+
+// function createIncrementor(n) {
+//     return function (num) {
+//         return n + num
+//     }
+// }
+//
+// const addOne = createIncrementor(1);
+// const addTen = createIncrementor(10);
+//
+// console.log(addOne(10));
+// console.log(addTen(10));
+// console.log(addTen(41));
+
+// function urlGenerator(domain) {
+//     return function (url) {
+//         return `https://${url}.${domain}`
+//     }
+// }
+//
+// const comUrl = urlGenerator('com');
+// const uaUrl = urlGenerator('ua');
+//
+// console.log(comUrl('google'));
+// console.log(uaUrl('google'));
+
+// ИВАН ПЕТРУЧЕНКО
+
+let number = 5;
+
+function logNumber() {
+    console.log(number);
+}
+
+number = 6;
+
+logNumber();
+
+let a = 3;
+function addTwo(x) {
+    let ret = x + 2;
+    return ret
+}
+let b = addTwo(a);
+console.log(b);
+
+</script>
+</body>
+</html>
