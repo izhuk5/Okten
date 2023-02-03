@@ -11,20 +11,37 @@
 
 
 <script>
+// БАГАТОВИМІРНИЙ МАСИВ - масив всередині масиву
 let arr = [
-    [11,22,33], // 0
+    [11, 22, 33], // 0
     [], // 1
     [] // 2
-];
-
-// Можна достукатись ось так
-console.log(arr);
-//                          0  1  2
-let innerArray = arr[0]; // 11 22 33
+]
+console.log(arr[0]);
+let innerArray = arr[0]; // innerArray - це внутрішній масив
 console.log(innerArray[1]);
-
-// А ще можна ось так
 console.log(arr[0][1]);
+
+
+
+
+
+
+
+// let arr = [
+//     [11,22,33], // 0
+//     [], // 1
+//     [] // 2
+// ];
+//
+// // Можна достукатись ось так
+// console.log(arr);
+// //                          0  1  2
+// let innerArray = arr[0]; // 11 22 33
+// console.log(innerArray[1]);
+//
+// // А ще можна ось так
+// console.log(arr[0][1]);
 
 </script>
 

@@ -13,16 +13,29 @@
 <script>
 
 // МАСИВИ //
-let arr = [123,234,345,-123,0,'asd'];
-console.log(arr);
+let arr;
+arr = [123, 234, 345, -123, 0, true, 'asdsad'];
+console.log(arr[0]); // звертаємось до першого елемента(ячейка) масива
 console.log(arr.length);
-// якщо я хочу перевизначити елементи масиву
-arr[0] = 'new value';
+arr[0] = 'new value'; // перевизначили елемент масиву
+// останній індекс це довжина -1
+arr[7] = 'Okten';
+arr[arr.length] = '1111111';  // до кінця масиву завжди додаємо новий елемент, кожен раз не обраховуючи кільість елементів
 console.log(arr);
-arr[7] = 'okten';
-console.log(arr); // 8
-arr[arr.length]  = 55; // додали в кінець масиву 55
+arr[arr.length] = 'last value1';
 console.log(arr);
+
+
+// let arr = [123,234,345,-123,0,'asd'];
+// console.log(arr);
+// console.log(arr.length);
+// // якщо я хочу перевизначити елементи масиву
+// arr[0] = 'new value';
+// console.log(arr);
+// arr[7] = 'okten';
+// console.log(arr); // 8
+// arr[arr.length]  = 55; // додали в кінець масиву 55
+// console.log(arr);
 
 
 </script>
