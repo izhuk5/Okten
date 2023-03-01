@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js_7.Data</title>
+</head>
+<body>
+
+
+<script>
+
+
+// let now = new Date(); // поточний час
+// console.log(now.getFullYear());
+// console.log(now.getMonth());
+// console.log(now.getDay());
+// console.log(now.getHours());
+// console.log(now.getMinutes());
+// console.log(now.getSeconds());
+// console.log(now.getMilliseconds());
+// console.log(now.getTime());
+// let date1 = new Date("February 22 2023 20:00");
+
+// Обробка помилок
+// console.log('start');
+// try {
+//     console.log(a);
+// } catch (error) { // назва аргумента довільна
+//     console.log(error);
+// } finally { // виконається в тому чи іншому випадку
+//     console.log('finally block');
+// }
+// console.log('end');
+
+// function calc(a, b) {
+//     if (b === 0) {
+//         throw new Error('b is 0');
+//     }
+//     return a / b;
+// }
+// calc(10,0);
+
+// Оператор опціональної послідовності
+// let user = undefined;
+// user?.name; // захист від потенційних можливих варіацій колий обєкт може не прийти щоб не буду іфи тай кетчі і тд тп
+
+// Деструктуризаці
+// let user = {
+//     name: 'vasya',
+//     age: 31,
+//     foo() {
+//         console.log('foo');
+//     }
+// }
+// let {age, name} = user;
+// console.log(name);
+// console.log(age);
+
+// Spread оператор - за допомогою якого ми можемо копіювати один обєкт в інший
+// let user = {
+//     name: 'vasya',
+//     age: 123
+// };
+// let userCopy = {...user};
+// console.log(userCopy);
+// console.log(userCopy === user); // не являє собою один і той самий обєкт
+// За допомогою spread ми можемо копіювати масиви
+// let nums = [11, 22, 33];
+// let nums2 = [...nums];
+
+// Поверхнева та глибока копія та JSON
+let user = {
+    name: 'vasya',
+    skills: ['html', 'js']
+}
+
+let s = JSON.stringify(user); // перетворить все що ми передамо в стрінгове значення
+console.log(s);
+console.log(JSON.parse(s)); // перетворив назад в обєкт . Але це вже буде геть зовсім інша ячейка памяті, але поведінку не копіює (функції)
+
+
+let assign = Object.assign({}, user)
+console.log(assign);
+console.log(assign.skills === user.skills);
+// let userClone = {...user};
+// console.log(user.skills === userClone.skills);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

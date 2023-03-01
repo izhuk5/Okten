@@ -11,40 +11,12 @@
 
 <script>
 
-
-// function calc(a, b ) {
-//     let result = a + b;
-//     return result;
+// function calc(a, b) {
+//     return a + b;
 // }
 //
-// let r1 = calc(1, 1);
-// console.log(r1)
+// console.log(calc(1, 10));
 
-// function percentage(cash, per) {
-//     return cash / 100 * per;
-// }
-//
-// let salary = percentage(1000, 0.9);
-// console.log(salary);
-//
-// function tax(sum) {
-//     let pdv = sum / 100 * 20;
-//     let warTax = sum / 100 * 1.5;
-//     return sum - pdv - warTax;
-// }
-//
-// let number = tax(40000);
-// console.log(number);
-
-function userFilter(users) {
-    let filteredUsers = [];
-    for (const user of users) {
-        if (user.age > 30) {
-            filteredUsers.push(user)
-        }
-    }
-    return filteredUsers;
-}
 
 let users = [
     {name: 'vasya', age: 31, status: false},
@@ -59,9 +31,31 @@ let users = [
     {name: 'olya', age: 31, status: false},
     {name: 'max', age: 31, status: true}
 ];
-let filter = userFilter(users);
-console.log(filter);
 
+// function userFilter(users) {
+//     let filteredUsers = [];
+//     for (const user of users) {
+//         if (user.age > 30) {
+//             filteredUsers.push(user);
+//         }
+//     }
+//     return filteredUsers;
+// }
+// let filtered = userFilter(users);
+// console.log(filtered);
+
+
+// function calc(arr) {
+//     for (const arrElement of arr) {
+//         if (arrElement === 1 ) {
+//             console.log(arrElement, 'найменше число масиву');
+//         } else {
+//             console.log('шось тут не так');
+//         }
+//     }
+//     return arr;
+// }
+// calc(arr);
 
 </script>
 

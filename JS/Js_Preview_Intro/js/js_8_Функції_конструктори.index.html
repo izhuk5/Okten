@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>js_8_Функції_конструктори</title>
+</head>
+<body>
+
+<script>
+
+    // Функції конструкторів
+
+    // v1
+    // function User(name, age, status, wife) {
+    //     this.name = name;
+    //     this.age = age;
+    //     this.status = status;
+    //     this.wife = wife;
+    // }
+    // будуємо майбутній обєкт
+    // let user1 = new User('Ihor', 28, true, {name: 'Alina', age: 22});
+    //
+    // v2
+    // function User(name, age, status, wifeName, wifeAge) {
+    //     this.name = name;
+    //     this.age = age;
+    //     this.status = status;
+    //     this.wife = {name: wifeName, age: wifeAge};
+    // }
+    // let user1 = new User('Ihor', 28, true, 'Alina', 22);
+    // console.log(user1);
+
+    // Prototype call apply bind
+    // v1
+    // function User(name, age) {
+    //     this.name = name;
+    //     this.age = age;
+    // }
+    // let user1 = new User('Ihor', 22);
+    // console.log(user1);
+    // v1 - prototype - більш зручний варіант. Дає можливість дописувати якісь характеристики в функцію конструктора
+    // User.prototype.greeting = function () {
+    //     return `hello my name is ${this.name}`; // this - буде звертатись до нашого майбутнього обєкту
+    // }
+    // let user2 = new User('vasya', 12);
+    // console.log(user2.greeting());
+    // // Таким чином мо розширили функцію конструктор
+
+    // v2
+    // let user = new User('vasya', 31);
+    // user.greeting = function (msg) {
+    //     return `${msg} my name is ${this.name}`;
+    // };
+    // console.log(user.greeting());
+    // let user2 = new User('Ihor', 28);
+    // console.log(user.greeting.apply(user2, ['hi'])); // apply - це функція яка дозволяє підмінити контекст this. Ми кажемо виконай наш greeting на інший обєкт в нашому випадку на user2.
+    // apply - приймає 1 аргумент який вказує на контекст ключевого слова this, 2 аргумент який вказує вказує на аргументи з функції
+    // v3 - bite - 1 аргумент який підміняє контекст this, в якості другого аргумента ми визначаємо rest аргумент
+
+    // Класи та наслідування
+    // Класова конструкція дозволяє визначати поведінку в тілі самого класа
+    // Якщо функція знаходиться в межах класу то вона метод
+    // class User {
+    //
+    //     constructor(name, age) {
+    //         this.name = name;
+    //         this.age = age;
+    //     }
+    //
+    //     // greeting() {
+    //     //     return `hello my namse is ${this.name}`;
+    //     // }
+    //
+    //     work() {
+    //         return `work in process`;
+    //     }
+    //
+    // }
+    //
+    // // Розширення
+    // // Customer - це нащадок User. Тобто розширює юзера
+    // class Customer extends User {
+    //     constructor(username, age, password) {
+    //         super(username, age); // це те саме що this
+    //         this.password = password;
+    //     }
+    // }
+    //
+    // console.log(new Customer('vasya', 31, '111'));
+    // console.log(Customer);
+
+
+    // Більш коротка версія як писати наслідування
+    // function User(name, age) {
+    //     this.name = name;
+    //     this.age = age;
+    // }
+    //
+    // function Customer(name, age, password) {
+    //     User.apply(this, arguments); // всі аргументи
+    //     this.password = password;
+    // }
+    //
+    // let customer = new Customer('vasya', 31, '1111');
+    // console.log(customer);
+
+    // Прототипи обєктів
+    // Всі обєкти будуються на базі інших обєктвів
+    let user = {
+        id: 1,
+        name: 'kokos'
+    };
+
+    let user2p = Object.create(user);
+    console.log(user2p === user);
+    console.log(user2p.id);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // Функція конструктор - це функція
+    // 0:00 - Функція конструктор
+    // 28:59 - prototype - це характеристика будь якої функції конструктора яка спроможна розширювати нашу функцію конструктор. Юзаємо коли нема доступу до конструктора, коли це не твій конструктор.
+    // Array.prototype.print = function () {
+    //     for (const item of this) {
+    //         console.log(item);
+    //     }
+    //     console.log('********');
+    // }
+    // let array = new Array(11, 22, 33);
+    // array.print();
+    //
+    // users.print();
+    //
+    // 1:01:50 - Прототипіювання
+    // 1:16:08 - Класи - це можливість юзати цукврову синтиксачну конструкцію для створення обєктів. Це замінник функцій конструкторів
+
+
+
+
+
+
+
+    // prototype
+    // function Dev(name, age, skills) {
+    //     this.name = name;
+    //     this.age = age;
+    //     this.skills = skills;
+    // }
+    // Dev.prototype.addSkills = function (skill) {
+    //     this.skills.push(skill);
+    // }
+    // let dev = new Dev('Ihor', 28, [{title: 'javascript', exp: '10 year'}]);
+    // console.log(dev);
+    // console.log(dev.skills[0].exp);
+
+    // function Dev(name, age, skills) {
+    //     this.name = name;
+    //     this.age = age;
+    //     this.skills = skills;
+    //     this.addSkill = function (skill) {
+    //         this.skills.push(skill);
+    //     }
+    // }
+    // let dev = new Dev('Ihor', 28, [{title: 'javascript', exp: '1 year'}]);
+    // console.log(dev);
+    // console.log(dev.skills[0].exp);
+
+</script>
+</body>
+</html>

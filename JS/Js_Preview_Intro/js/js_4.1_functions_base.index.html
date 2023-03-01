@@ -11,25 +11,25 @@
 
 <script>
 
-//    function writer(productTitle, price, descr) {
-//        document.write(
-//            `
-//        <div>
-//            <h2>${productTitle} ${price}</h2>
-//            <p>${descr}</p>
-//        </div>
+// function writer(productTitle, price, descr) {
+//     document.write(
+//         `
+//         <div>
+//             <h2>${productTitle} - ${price}</h2>
+//             <p>${descr}</p>
+//         </div>
+//         `
+//     )
+// }
 //
-//    `);
-//    }
-//
-//    writer('milk', 32, 'some milk');
-
+// writer('4len', 322, 'Ahahah)');
 
 function printerArray(array) {
-    for (const item of array) {
-        console.log(item);
+    for (const arrayElement of array) {
+        console.log(arrayElement);
     }
 }
+
 
 let users = [
     {name: 'vasya', age: 31, status: false},
@@ -44,32 +44,32 @@ let users = [
     {name: 'olya', age: 31, status: false},
     {name: 'max', age: 31, status: true}
 ];
+
 printerArray(users);
 
-let products = [
-    {
-        title: 'milk',
-        price: 22,
-        image: 'https://img.freepik.com/free-photo/glass-jar-full-milk_23-2148211467.jpg?w=1800&t=st=1674899579~exp=1674900179~hmac=4de446e81422e5302d0c5e50988d9e999a442382b2eeab37eb591540fc36b0a2'
-    },
-    {
-        title: 'juice',
-        price: 27,
-        image: 'https://img.freepik.com/free-psd/organic-juice-poster-template_23-2148911049.jpg?w=1800&t=st=1674899633~exp=1674900233~hmac=9a51f5ad9b379bd6227229901910a8eb0f04fa65b6cb2c124ae1408c35ff2853'
-    },
-    {
-        title: 'tomato',
-        price: 47,
-        image: 'https://img.freepik.com/free-vector/fresh-organic-ripe-tomato_53876-111423.jpg?w=1800&t=st=1674899747~exp=1674900347~hmac=ac4ec9d29f5ee86211edc0256e852cce8e81d0e2ec277e2d5051afcedfaf228c'
-    },
-    {
-        title: 'tea',
-        price: 15,
-        image: 'https://img.freepik.com/free-vector/glass-cup-black-tea_1182-1254.jpg?w=1800&t=st=1674899790~exp=1674900390~hmac=d57fe6599e3940ecddecb311efd064ec9ab2e7282ca05891991c7a01d1c8b2eb'
-    }
-];
 
-printerArray(products);
+// let products = [
+//     {
+//         title: 'milk',
+//         price: 22,
+//         image: 'https://img.freepik.com/free-photo/glass-jar-full-milk_23-2148211467.jpg?w=1800&t=st=1674899579~exp=1674900179~hmac=4de446e81422e5302d0c5e50988d9e999a442382b2eeab37eb591540fc36b0a2'
+//     },
+//     {
+//         title: 'juice',
+//         price: 27,
+//         image: 'https://img.freepik.com/free-psd/organic-juice-poster-template_23-2148911049.jpg?w=1800&t=st=1674899633~exp=1674900233~hmac=9a51f5ad9b379bd6227229901910a8eb0f04fa65b6cb2c124ae1408c35ff2853'
+//     },
+//     {
+//         title: 'tomato',
+//         price: 47,
+//         image: 'https://img.freepik.com/free-vector/fresh-organic-ripe-tomato_53876-111423.jpg?w=1800&t=st=1674899747~exp=1674900347~hmac=ac4ec9d29f5ee86211edc0256e852cce8e81d0e2ec277e2d5051afcedfaf228c'
+//     },
+//     {
+//         title: 'tea',
+//         price: 15,
+//         image: 'https://img.freepik.com/free-vector/glass-cup-black-tea_1182-1254.jpg?w=1800&t=st=1674899790~exp=1674900390~hmac=d57fe6599e3940ecddecb311efd064ec9ab2e7282ca05891991c7a01d1c8b2eb'
+//     }
+// ];
 
 </script>
 

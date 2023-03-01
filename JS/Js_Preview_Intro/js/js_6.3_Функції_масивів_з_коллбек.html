@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js_6.3_Функції_масивів_з_коллбек</title>
+</head>
+<body>
+
+
+<script>
+
+    let users = [
+        {name: 'vasya', age: 31, status: false},
+        {name: 'petya', age: 30, status: true},
+        {name: 'kolya', age: 29, status: true},
+        {name: 'olya', age: 28, status: false},
+        {name: 'max', age: 30, status: true},
+        {name: 'anya', age: 31, status: false},
+        {name: 'oleg', age: 28, status: false},
+        {name: 'andrey', age: 29, status: true},
+        {name: 'masha', age: 30, status: true},
+        {name: 'olya', age: 31, status: false},
+        {name: 'max', age: 31, status: true}
+    ];
+
+    // forEach
+    // users.forEach(value => console.log(value));
+    //
+    // ми описали як себе поводить функція forEach
+    // users.forEach(function(value, index) {
+    //     // console.log(value, index); // для кожного елементу масиву вона буде виводити наш елемент. Value це довільна назва. Index - покаже індекс. Array - це наш масив який ми ітеруємо. Можемо не вказувати його в аргументах бо це буває дуже рідко
+    //     // console.log(array);
+    //
+    // });
+
+    // filter - більш розгорнута синтаксична конструкція
+    // let filteredUsers = users.filter(function (value) {
+    //    return value.age > 30;
+    // });
+    // console.log(filteredUsers);
+    // скорочена версія
+    // let filteredUsers = users.filter(value => value.age > 30);
+
+    // map - будемо мапувати наш обьєкт який приходить який знаходиться в масиві до якогось нового обьєкту
+    //
+    // розгорнутий варіант
+    // let mapedUsers = users.map(function (value, index) {
+    //     let newUser = {
+    //         name: value.name,
+    //         age: value.age,
+    //         status: value.status,
+    //         id: index + 1
+    //     }
+    //     return newUser;
+    // });
+    // console.log(mapedUsers);
+    //
+    // Скоротили
+    // let mapedUsers = users.map(function (value, index) {
+    //     return {
+    //         name: value.name,
+    //         age: value.age,
+    //         status: value.status,
+    //         id: index + 1
+    //     }
+    // });
+    // console.log(mapedUsers);
+    //
+    // Ще більше скоротили
+    // let mapedUsers = users.map(function (value, index) {
+    //     return {...value, id:index+1}; // ... - rest argument в даному випадку spread
+    // });
+    // console.log(mapedUsers);
+    //
+    // Стрілочний варіант
+    // let mapUsers = users.map((value, index) => {
+    //     return {name: value.name, age: value.age, status: value.status, id: index +1}
+    // })
+    // console.log(mapUsers);
+
+    // find - те саме що filter але знаходить перше входження певрного елементу по пенвій умові
+    // let find = users.find(value => value.name === 'max');
+    // console.log(find);
+
+    // every - перевіряї кожен елмент масиву статус true. І якщо всі true то поверне true
+    // console.log(users.every(value => value.status));
+
+    // sort - порівнюємо
+    // let sort = users.sort((u1, u2) => {
+    //     return u1.age - u2.age;
+    // });
+    // console.log(sort);
+    //
+    // фільтруємо по аскі кодах
+    // console.log(users.sort((a, b) => {
+    //     if (a.name > b.name) {
+    //         return 1;
+    //     }
+    //     if (a.name < b.name) {
+    //         return -1;
+    //     }
+    //     if (a.name === b.name) {
+    //         return 0;
+    //     }
+    // }));
+
+    // reduce - поки що туговато :(
+    // let reduced = users.reduce((accumulator, user) => {
+    //     if (user.status) {
+    //         accumulator.statT.push(user);
+    //     } else {
+    //         accumulator.statF.push(user);
+    //     }
+    //     return accumulator;
+    // }, {statT:[], statF:[]});
+    // console.log(reduced);
+
+
+
+
+</script>
+</body>
+</html>

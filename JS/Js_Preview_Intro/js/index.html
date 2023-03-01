@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js_6.2_Базові_функції_масивів</title>
+</head>
+<body>
+
+<script>
+
+  let arr = [];
+  console.log(Array.isArray(arr));
+
+  // arr[arr.length] = 'tasdasd'; // можна так в масив щось
+  arr.push('new element1'); // додасть новий елемент в кінець масиву
+  arr.push('new element2');
+  arr.push('new element3');
+  arr.push('new element4');
+  arr.push('new element5');
+
+
+  arr.pop(); // виріже кінцевий елемент в масиву
+  arr.unshift('!!!'); // додає в початок
+  arr.shift(); // видаляє з початку
+  let join = arr.join('-'); // зєдная всі елементи -
+
+  let nums = [11, 22, 33];
+  let concat = arr.concat(nums); // обєднали 2 масиви
+  console.log(concat);
+
+  console.log(nums.reverse()); // масив буде в зворотньому напрямку
+
+  // let splice = concat.splice(0, 2); вирізали з 0 до 2 включно елементи масиву
+
+
+
+
+
+</script>
+
+
+</body>
+</html>
