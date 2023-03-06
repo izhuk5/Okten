@@ -71,7 +71,7 @@
 // showElements(startIndex);
 //
 // prevBtn.addEventListener('click', () => {
-//    startIndex -= 2;
+//    startIndex -= 10;
 //    showElements(startIndex);
 // });
 //
